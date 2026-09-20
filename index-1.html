@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nihal Kumar Singh | NOC Engineer and Network Automation</title>
+<meta name="description" content="Nihal Kumar Singh, L1 NOC Engineer at PGCIL's National Transmission Control Centre. Journey, skills, projects and photo gallery.">
+<meta name="theme-color" content="#0C1226">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C1226; --surface:#141B38; --line:#2A345F; --text:#E9ECF8; --muted:#9AA5CC;
+  --amber:#FFB547; --signal:#5CE1E6; --danger:#FF7A7A;
+  --f-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--ink);color:var(--text);font:400 1.0625rem/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+a{color:var(--signal)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+img{max-width:100%}
+
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+main,footer{position:relative;z-index:1}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem clamp(1rem,3vw,2rem);background:rgba(12,18,38,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(42,52,95,.6)}
+.brand{font:700 1.15rem var(--f-display);color:var(--text);text-decoration:none;letter-spacing:-.01em}
+.nav nav{display:flex;gap:1.4rem;overflow-x:auto;scrollbar-width:none}
+.nav nav::-webkit-scrollbar{display:none}
+.nav nav a{color:var(--muted);text-decoration:none;font-size:.95rem;font-weight:500;white-space:nowrap;transition:color .2s}
+.nav nav a:hover{color:var(--text)}
+@media (max-width:640px){.brand{display:none}.nav nav{gap:1.1rem;width:100%;justify-content:space-between}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:6rem 0 4rem}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,18,38,.88) 0%,rgba(12,18,38,.55) 45%,rgba(12,18,38,0) 75%);pointer-events:none}
+@media (max-width:860px){.hero::before{background:linear-gradient(180deg,rgba(12,18,38,.35),rgba(12,18,38,.8))}}
+.hero-inner{position:relative;max-width:660px}
+h1{margin:0;font:700 clamp(3.1rem,9.5vw,7.4rem)/.95 var(--f-display);letter-spacing:-.035em;perspective:700px}
+.w{display:inline-block;white-space:nowrap}
+.ch{display:inline-block;transform-origin:50% 100%;animation:rise .95s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(70%) rotateX(-75deg)}to{opacity:1;transform:none}}
+.lede{margin:1.6rem 0 2rem;max-width:34rem;font-size:clamp(1.05rem,2.2vw,1.25rem);color:#C9D0EC}
+.fade{animation:fade .9s 1s both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.8rem 1.5rem;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:600 1rem var(--f-body);text-decoration:none;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--signal)}
+.btn.primary{background:var(--amber);border-color:var(--amber);color:#1B1300}
+.btn.primary:hover{border-color:#fff}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none}
+
+/* sections */
+.band{position:relative;padding:clamp(4rem,9vw,7rem) 0;background:rgba(12,18,38,.84)}
+.band.alt{background:rgba(20,27,56,.88)}
+h2{margin:0 0 .6rem;font:700 clamp(2rem,4.6vw,3.3rem)/1.05 var(--f-display);letter-spacing:-.025em;max-width:22ch}
+.sub{margin:0 0 3rem;max-width:40rem;color:var(--muted)}
+h3{margin:0 0 1.4rem;font:600 1.3rem var(--f-display)}
+
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+@media (max-width:860px){.tracks{grid-template-columns:1fr;gap:3rem}}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding:0 0 2rem 1.7rem;border-left:2px solid var(--line)}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-7px;top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 4px rgba(92,225,230,.15);transition:box-shadow .3s}
+.tl.work li::before{background:var(--amber);box-shadow:0 0 0 4px rgba(255,181,71,.15)}
+.tl li:hover::before{box-shadow:0 0 0 8px rgba(92,225,230,.18)}
+.tl.work li:hover::before{box-shadow:0 0 0 8px rgba(255,181,71,.18)}
+.t-title{font:600 1.2rem/1.3 var(--f-display)}
+.t-place{margin-top:.15rem}
+.t-when{margin-top:.15rem;color:var(--amber);font-size:.92rem;font-weight:500}
+.t-note{margin:.5rem 0 0;color:var(--muted);font-size:.98rem;max-width:34rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:.55rem;margin:0;padding:0;list-style:none}
+.tags li{padding:.4rem .9rem;border:1px solid var(--line);border-radius:999px;font-size:.95rem;background:rgba(12,18,38,.6)}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem}
+.proj{height:100%;padding:1.6rem;background:var(--ink);border:1px solid var(--line);border-top:3px solid var(--accent,var(--signal));border-radius:4px 20px 4px 20px}
+.proj h3{margin:0 0 .5rem}
+.proj p{margin:0 0 1.1rem;color:#C9D0EC;font-size:1rem}
+.proj .tags li{font-size:.85rem;padding:.25rem .7rem}
+
+.gallery{columns:3 260px;column-gap:1.1rem}
+.tile{break-inside:avoid;margin:0 0 1.1rem}
+.shot{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:10px;overflow:hidden}
+.shot img{display:block;width:100%;height:auto;background:var(--surface)}
+.tile figcaption{padding:.5rem .2rem 0;color:var(--muted);font-size:.92rem}
+.empty{padding:2.2rem;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+
+.contact-list{list-style:none;margin:0 0 1.6rem;padding:0;display:grid;gap:.6rem;font-size:1.15rem}
+.contact-list b{display:inline-block;min-width:6.5rem;color:var(--muted);font-weight:500}
+.place{color:var(--muted)}
+
+footer{padding:1.6rem 0;background:var(--ink);border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.linklike{background:none;border:0;color:var(--muted);font:inherit;cursor:pointer;text-decoration:underline;padding:.2rem}
+.linklike:hover{color:var(--text)}
+
+/* 3D helpers */
+.rv{opacity:0;transform:perspective(900px) rotateX(18deg) translateY(32px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out;will-change:transform}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;padding:1rem;background:rgba(5,8,20,.92)}
+.lb img{max-width:min(96vw,1200px);max-height:80vh;object-fit:contain;border-radius:8px;animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:perspective(900px) rotateY(-18deg) scale(.92)}to{opacity:1;transform:none}}
+.lb p{margin:0;color:var(--muted);min-height:1.5em}
+.lb button{position:absolute;background:rgba(20,27,56,.9);border:1px solid var(--line);color:var(--text);width:3rem;height:3rem;border-radius:50%;font-size:1.6rem;line-height:1;cursor:pointer}
+.lb button:hover{border-color:var(--signal)}
+.lb .x{top:1rem;right:1rem}.lb .pv{left:1rem;top:50%}.lb .nx{right:1rem;top:50%}
+
+/* admin */
+.admin{position:fixed;inset:0;z-index:70}
+.scrim{position:absolute;inset:0;background:rgba(5,8,20,.72)}
+.drawer{position:absolute;top:0;right:0;bottom:0;width:min(480px,100%);overflow:auto;padding:1.4rem;background:var(--surface);border-left:1px solid var(--line);animation:slide .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes slide{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+.drawer h2{font-size:1.6rem;margin:0}
+.drawer h3{margin:1.8rem 0 .8rem;font-size:1.1rem}
+.drawer .top{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.drawer p.help{margin:.5rem 0 0;color:var(--muted);font-size:.9rem}
+.field{display:block;margin:.8rem 0 0}
+.field span{display:block;margin-bottom:.25rem;color:var(--muted);font-size:.88rem}
+.field input[type=text],.field input[type=password]{width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:8px;background:var(--ink);color:var(--text);font:inherit;font-size:1rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.chk{display:flex;gap:.5rem;align-items:center;margin-top:.8rem;color:var(--muted);font-size:.92rem}
+.status{min-height:1.4em;margin:1rem 0 0;font-size:.95rem}
+.status.ok{color:var(--signal)}.status.err{color:var(--danger)}
+.pend,.mine{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.6rem}
+.pend li,.mine li{display:grid;grid-template-columns:56px 1fr auto;gap:.7rem;align-items:center;padding:.5rem;border:1px solid var(--line);border-radius:10px;background:var(--ink)}
+.pend img,.mine img{width:56px;height:56px;object-fit:cover;border-radius:6px;background:var(--surface)}
+.pend input{width:100%;padding:.45rem .6rem;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text);font:inherit;font-size:.92rem}
+.mine .cap{font-size:.92rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.small{padding:.35rem .8rem;font-size:.85rem}
+.danger:hover{border-color:var(--danger);color:var(--danger)}
+
+/* futuristic layer */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(92,225,230,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(92,225,230,.06) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 72%);mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 72%);animation:gridmove 22s linear infinite}
+@keyframes gridmove{to{background-position:0 56px}}
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:30;background:linear-gradient(90deg,var(--amber),var(--signal));transform:scaleX(0);transform-origin:0 50%}
+.glow{position:fixed;top:0;left:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(92,225,230,.14),transparent 65%);pointer-events:none;z-index:15;mix-blend-mode:screen;opacity:0;transition:opacity .4s;will-change:transform}
+@media (hover:none){.glow{display:none}}
+.pill{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 1.4rem;padding:.4rem .95rem;border:1px solid rgba(92,225,230,.35);border-radius:999px;background:rgba(92,225,230,.08);color:var(--signal);font:500 .85rem var(--f-body);letter-spacing:.04em}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--signal);animation:ping 1.8s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(92,225,230,.6)}100%{box-shadow:0 0 0 10px rgba(92,225,230,0)}}
+h1{text-shadow:0 0 60px rgba(92,225,230,.22)}
+.role{margin:1.2rem 0 0;font:500 clamp(1.1rem,2.6vw,1.5rem)/1.4 var(--f-display);color:var(--amber);min-height:1.6em}
+.role .prompt{color:var(--signal);margin-right:.6rem}
+.caret{display:inline-block;width:.55ch;height:1.05em;margin-left:.2rem;background:var(--signal);vertical-align:-.15em;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.ticker{position:relative;z-index:1;overflow:hidden;border-block:1px solid var(--line);background:rgba(20,27,56,.92);padding:.95rem 0}
+.ticker .track{display:flex;width:max-content;animation:scrollx 34s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker span{display:inline-flex;align-items:center;gap:2.5rem;margin-right:2.5rem;font:600 .92rem var(--f-display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.ticker span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--amber)}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+.skgroup{height:100%;padding:1.5rem;border:1px solid var(--line);border-radius:14px;background:rgba(12,18,38,.6)}
+.skgroup h3{margin-bottom:1rem}
+.spot{position:relative}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(92,225,230,.17),transparent 62%);opacity:0;transition:opacity .25s;pointer-events:none}
+.spot:hover::after{opacity:1}
+.mag{transition:transform .2s ease-out,border-color .2s,background .2s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="brand" href="#top">Nihal</a>
+  <nav aria-label="Main">
+    <a href="#journey">Journey</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-inner">
+        <p class="pill fade"><span class="dot"></span>All links up</p>
+        <h1 id="name"></h1>
+        <p class="role fade" aria-label="L1 NOC Engineer"><span class="prompt" aria-hidden="true">&gt;</span><span id="role" aria-hidden="true">L1 NOC Engineer</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="lede fade">I monitor and configure the Nokia IP/MPLS network that carries India's national power transmission grid, on 24x7 shifts at PGCIL's National Transmission Control Centre in New Delhi. I also write Python automation that turns network alarms into tickets.</p>
+        <div class="cta fade">
+          <a class="btn primary mag" href="#journey">See my journey</a>
+          <a class="btn mag" href="#gallery">Open gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+
+  <section class="band" id="journey">
+    <div class="wrap">
+      <h2>From Class 10 to the national grid</h2>
+      <p class="sub">School, a diploma in electrical engineering, a B.Tech in computer science, and now the network that keeps the power grid connected.</p>
+      <div class="tracks">
+        <div><h3>Education</h3><ol class="tl edu" id="tl-edu"></ol></div>
+        <div><h3>Work</h3><ol class="tl work" id="tl-work"></ol></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="skills">
+    <div class="wrap">
+      <h2>What I work with</h2>
+      <p class="sub">Electrical background, computer science degree, and daily hands-on time in a live carrier-grade network.</p>
+      <div class="skills" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <section class="band" id="projects">
+    <div class="wrap">
+      <h2>Things I build on the side</h2>
+      <p class="sub">Projects that grew out of the work I do and the ideas I keep having.</p>
+      <div class="projects" id="proj-grid"></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="gallery">
+    <div class="wrap">
+      <h2>Gallery</h2>
+      <p class="sub">Moments and places. Tap a photo to view it larger.</p>
+      <div class="gallery" id="gal"></div>
+      <div class="empty" id="gal-empty" hidden>No photos yet. Open the admin panel from the footer to add your first one.</div>
+    </div>
+  </section>
+
+  <section class="band" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p class="sub">Want to talk networks, NOC work or automation? Reach me here.</p>
+      <ul class="contact-list" id="contact-list"></ul>
+      <p class="place" id="place"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span id="copy"></span>
+    <button class="linklike" id="open-admin" type="button" hidden>Admin</button>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="x" id="lb-close" type="button" aria-label="Close">&times;</button>
+  <button class="pv" id="lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+  <button class="nx" id="lb-next" type="button" aria-label="Next photo">&rsaquo;</button>
+</div>
+
+<!-- Admin panel -->
+<div class="admin" id="admin" role="dialog" aria-modal="true" aria-labelledby="adm-title" hidden>
+  <div class="scrim" id="adm-scrim"></div>
+  <div class="drawer">
+    <div class="top">
+      <h2 id="adm-title">Photo admin</h2>
+      <button class="btn small" id="adm-close" type="button">Close</button>
+    </div>
+    <p class="help">Photos are saved to your own GitHub repository, and the site shows them after GitHub Pages redeploys (about a minute).</p>
+
+    <h3>1. Connect to GitHub</h3>
+    <div class="row2">
+      <label class="field"><span>GitHub username</span><input type="text" id="a-user" autocomplete="off" autocapitalize="off"></label>
+      <label class="field"><span>Repository name</span><input type="text" id="a-repo" autocomplete="off" autocapitalize="off"></label>
+    </div>
+    <div class="row2">
+      <label class="field"><span>Branch</span><input type="text" id="a-branch" value="main" autocomplete="off" autocapitalize="off"></label>
+      <label class="field"><span>Access token</span><input type="password" id="a-token" autocomplete="off"></label>
+    </div>
+    <label class="chk"><input type="checkbox" id="a-remember"> Remember token on this device</label>
+    <p class="help">Token: GitHub, Settings, Developer settings, Fine-grained tokens. Give it access to this one repository only, with Contents set to Read and write.</p>
+    <p style="margin:1rem 0 0"><button class="btn small" id="a-connect" type="button">Connect and load photos</button></p>
+
+    <h3>2. Add photos</h3>
+    <label class="field"><span>Choose photos (large photos are resized automatically)</span>
+      <input type="file" id="a-files" accept="image/*" multiple>
+    </label>
+    <ul class="pend" id="pend"></ul>
+    <p style="margin:1rem 0 0"><button class="btn primary small" id="a-upload" type="button" disabled>Upload photos</button></p>
+
+    <p class="status" id="a-status" role="status" aria-live="polite"></p>
+
+    <h3>3. Your photos</h3>
+    <ul class="mine" id="mine"></ul>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ============================================================
+   EDIT YOUR DETAILS HERE. Leave "when" empty to hide it.
+   ============================================================ */
+const SITE = {
+  name: 'Nihal Kumar Singh',
+  email: 'nihalsingh38323@gmail.com',
+  phone: '+91 7461065458',
+  linkedin: 'https://www.linkedin.com/in/nihal-singh-410a8125a',
+  github: 'https://github.com/Nihalsingh14',
+  home: 'Siwan, Bihar',
+  workplace: 'New Delhi',
+  education: [
+    { title: 'Class 10', place: 'Maxwell Public School, Sonpur', when: '', note: '' },
+    { title: 'Diploma in Electrical Engineering', place: 'Govt. Polytechnic, Meham, Haryana', when: '', note: '' },
+    { title: 'B.Tech in Computer Science', place: 'SAGE University, Bhopal', when: '', note: '' }
+  ],
+  work: [
+    { title: 'Intern', place: 'North Bihar Power Distribution Company', when: '', note: 'First hands-on exposure to how power utilities run.' },
+    { title: 'NOC Engineer', place: 'Edge Telecom Pvt. Ltd. (ETPL), Delhi', when: 'Apr 2026 to Jun 2026', note: 'Network operations centre work.' },
+    { title: 'Associate Engineer, L1 NOC', place: "PGCIL National Transmission Control Centre (NTCC), New Delhi", when: 'Current', note: 'Placed through ManpowerGroup Services India. 24x7 shift-based monitoring and configuration of the Nokia IP/MPLS network supporting the national power transmission grid.' }
+  ],
+  skills: [
+    { title: 'Network operations', tags: ['Nokia IP/MPLS', 'BGP', 'IS-IS', 'Nokia NSP', 'Router configuration', '24x7 monitoring', 'Alarm and incident handling'] },
+    { title: 'Automation', tags: ['Python', 'Selenium', 'Machine learning', 'Alarm-to-ticket workflows'] },
+    { title: 'Foundations', tags: ['Computer science (B.Tech)', 'Electrical engineering (Diploma)', 'Computer networks and routing', 'Power grid domain knowledge', 'Mission-critical operations', 'Root-cause troubleshooting'] }
+  ],
+  projects: [
+    { title: 'NSP to SARAN automation', accent: '#5CE1E6', text: 'A Python and Selenium bot that raises SARAN dockets automatically from Nokia NSP alarms, so less time goes into manual ticketing.', tags: ['Python', 'Selenium', 'Nokia NSP'] },
+    { title: 'AquaDrive', accent: '#FFB547', text: 'An on-demand doorstep car wash platform.', tags: ['Side project'] },
+    { title: 'InkMate AI', accent: '#9F8CFF', text: 'An AI-assisted content studio for writing and creating.', tags: ['Side project', 'AI'] }
+  ]
+};
+
+/* ---------------- helpers ---------------- */
+const $ = s => document.querySelector(s);
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const h = (tag, attrs = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v === false || v == null) continue;
+    if (k === 'class') e.className = v; else e.setAttribute(k, v);
+  }
+  kids.flat().forEach(c => { if (c == null || c === false) return; e.append(c.nodeType ? c : document.createTextNode(c)); });
+  return e;
+};
+const io = 'IntersectionObserver' in window
+  ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 })
+  : null;
+const reveal = (el, i = 0) => { el.style.transitionDelay = (i % 4) * 90 + 'ms'; io ? io.observe(el) : el.classList.add('in'); };
+function tilt(el) {
+  el.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse' || reduced) return;
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    el.style.setProperty('--ry', (x * 12).toFixed(2) + 'deg');
+    el.style.setProperty('--rx', (-y * 12).toFixed(2) + 'deg');
+  });
+  el.addEventListener('pointerleave', () => { el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg'); });
+}
+
+/* ---------------- render static content ---------------- */
+(function build() {
+  // hero name, letter by letter
+  const nameEl = $('#name');
+  nameEl.setAttribute('aria-label', SITE.name);
+  let n = 0;
+  SITE.name.split(' ').forEach((word, wi, arr) => {
+    const w = h('span', { class: 'w', 'aria-hidden': 'true' });
+    [...word].forEach(ch => { w.append(h('span', { class: 'ch', style: 'animation-delay:' + (.15 + n * .045).toFixed(3) + 's' }, ch)); n++; });
+    nameEl.append(w);
+    if (wi < arr.length - 1) nameEl.append(' ');
+  });
+
+  const tl = (list, el) => list.forEach((it, i) => {
+    const li = h('li', { class: 'rv' },
+      h('div', { class: 't-title' }, it.title),
+      h('div', { class: 't-place' }, it.place),
+      it.when ? h('div', { class: 't-when' }, it.when) : null,
+      it.note ? h('p', { class: 't-note' }, it.note) : null);
+    el.append(li); reveal(li, i);
+  });
+  tl(SITE.education, $('#tl-edu'));
+  tl(SITE.work, $('#tl-work'));
+
+  SITE.skills.forEach((g, i) => {
+    const inner = h('div', { class: 'tilt skgroup spot' }, h('h3', {}, g.title), h('ul', { class: 'tags' }, g.tags.map(t => h('li', {}, t))));
+    tilt(inner);
+    const box = h('div', { class: 'rv' }, inner);
+    $('#skills-grid').append(box); reveal(box, i);
+  });
+
+  SITE.projects.forEach((p, i) => {
+    const inner = h('div', { class: 'tilt proj spot', style: '--accent:' + p.accent }, h('h3', {}, p.title), h('p', {}, p.text), h('ul', { class: 'tags' }, p.tags.map(t => h('li', {}, t))));
+    tilt(inner);
+    const wrap = h('article', { class: 'rv' }, inner);
+    $('#proj-grid').append(wrap); reveal(wrap, i);
+  });
+
+  const cl = $('#contact-list');
+  cl.append(h('li', {}, h('b', {}, 'Email'), h('a', { href: 'mailto:' + SITE.email }, SITE.email)));
+  cl.append(h('li', {}, h('b', {}, 'GitHub'), h('a', { href: SITE.github, target: '_blank', rel: 'noopener' }, 'github.com/Nihalsingh14')));
+  cl.append(h('li', {}, h('b', {}, 'LinkedIn'), h('a', { href: SITE.linkedin, target: '_blank', rel: 'noopener' }, 'Nihal Kumar Singh')));
+  if (SITE.phone) cl.append(h('li', {}, h('b', {}, 'Phone'), h('a', { href: 'tel:' + SITE.phone.replace(/\s/g, '') }, SITE.phone)));
+  $('#place').textContent = 'Based in ' + SITE.home + '. Working from ' + SITE.workplace + '.';
+  $('#copy').textContent = '\u00A9 ' + new Date().getFullYear() + ' ' + SITE.name;
+})();
+
+/* ---------------- gallery (public) ---------------- */
+const state = { items: [] };
+const imgSrc = f => 'gallery/' + encodeURIComponent(f);
+
+function renderGallery() {
+  const g = $('#gal');
+  g.replaceChildren();
+  $('#gal-empty').hidden = state.items.length > 0;
+  state.items.forEach((it, i) => {
+    const btn = h('button', { class: 'tilt shot', type: 'button', 'aria-label': 'Open photo ' + (i + 1) + (it.caption ? ': ' + it.caption : '') },
+      h('img', { src: imgSrc(it.file), alt: it.caption || 'Photo ' + (i + 1), loading: 'lazy', decoding: 'async' }));
+    btn.addEventListener('click', () => openLb(i));
+    tilt(btn);
+    const fig = h('figure', { class: 'tile rv' }, btn, it.caption ? h('figcaption', {}, it.caption) : null);
+    g.append(fig); reveal(fig, i);
+  });
+}
+async function loadGallery() {
+  try {
+    const r = await fetch('gallery.json?v=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('no gallery');
+    const j = await r.json();
+    state.items = Array.isArray(j.items) ? j.items : [];
+  } catch (e) { state.items = []; }
+  renderGallery();
+}
+loadGallery();
+
+/* lightbox */
+const lbState = { i: 0 };
+function showLb() { const it = state.items[lbState.i]; if (!it) return; $('#lb-img').src = imgSrc(it.file); $('#lb-img').alt = it.caption || ''; $('#lb-cap').textContent = it.caption || ''; }
+function openLb(i) { lbState.i = i; showLb(); $('#lb').hidden = false; document.body.style.overflow = 'hidden'; $('#lb-close').focus(); }
+function closeLb() { $('#lb').hidden = true; document.body.style.overflow = ''; }
+function stepLb(d) { const n = state.items.length; if (!n) return; lbState.i = (lbState.i + d + n) % n; showLb(); }
+$('#lb-close').onclick = closeLb;
+$('#lb-prev').onclick = () => stepLb(-1);
+$('#lb-next').onclick = () => stepLb(1);
+$('#lb').addEventListener('click', e => { if (e.target.id === 'lb') closeLb(); });
+
+/* ---------------- admin panel (GitHub-backed) ---------------- */
+const store = {
+  get: k => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
+  set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} },
+  del: k => { try { localStorage.removeItem(k); } catch (e) {} }
+};
+const val = id => $('#' + id).value.trim();
+let pending = [];   // {file, caption, url}
+let busy = false;
+let adminOpener = null;
+
+(function prefill() {
+  let user = store.get('adm_user'), repo = store.get('adm_repo');
+  if (!user && location.hostname.endsWith('.github.io')) {
+    user = location.hostname.split('.')[0];
+    const seg = location.pathname.split('/')[1];
+    repo = repo || (seg || user + '.github.io');
+  }
+  $('#a-user').value = user; $('#a-repo').value = repo;
+  $('#a-branch').value = store.get('adm_branch') || 'main';
+  const t = store.get('adm_token');
+  if (t) { $('#a-token').value = t; $('#a-remember').checked = true; }
+})();
+
+function say(msg, kind) { const s = $('#a-status'); s.textContent = msg; s.className = 'status' + (kind ? ' ' + kind : ''); }
+function setBusy(b) { busy = b; $('#a-connect').disabled = b; $('#a-upload').disabled = b || !pending.length; document.querySelectorAll('.mine button').forEach(x => x.disabled = b); }
+function explain(s, m) {
+  if (s === 401) return 'GitHub rejected the token (401). Check that it was pasted fully and has not expired.';
+  if (s === 403) return 'Access denied (403). The token needs Contents: Read and write on this repository. ' + (m || '');
+  if (s === 404) return 'Not found (404). Check the username, repository name and branch, and that the token can access this repository.';
+  if (s === 409 || s === 422) return 'GitHub could not save the change (' + s + '). Wait a few seconds and try again. ' + (m || '');
+  return 'GitHub error ' + s + '. ' + (m || '');
+}
+function cfg() {
+  const c = { user: val('a-user'), repo: val('a-repo'), branch: val('a-branch') || 'main', token: $('#a-token').value.trim() };
+  if (!c.user || !c.repo || !c.token) throw new Error('Fill in the GitHub username, repository name and token first.');
+  return c;
+}
+function saveCfg(c) {
+  store.set('adm_user', c.user); store.set('adm_repo', c.repo); store.set('adm_branch', c.branch);
+  if ($('#a-remember').checked) store.set('adm_token', c.token); else store.del('adm_token');
+  $('#open-admin').hidden = !$('#a-remember').checked;
+}
+async function gh(c, path, opts = {}) {
+  const headers = { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + c.token };
+  if (opts.body) headers['Content-Type'] = 'application/json';
+  let r;
+  try { r = await fetch('https://api.github.com/repos/' + encodeURIComponent(c.user) + '/' + encodeURIComponent(c.repo) + '/' + path, { ...opts, headers }); }
+  catch (e) { throw new Error('Could not reach GitHub. Check your internet connection.'); }
+  if (!r.ok) { let m = ''; try { m = (await r.json()).message; } catch (e) {} const err = new Error(explain(r.status, m)); err.status = r.status; throw err; }
+  return r.status === 204 ? null : r.json();
+}
+const b64json = o => btoa(unescape(encodeURIComponent(JSON.stringify(o, null, 2))));
+async function readGallery(c) {
+  try {
+    const f = await gh(c, 'contents/gallery.json?ref=' + encodeURIComponent(c.branch));
+    const data = JSON.parse(decodeURIComponent(escape(atob(f.content.replace(/\n/g, '')))));
+    if (!Array.isArray(data.items)) data.items = [];
+    return { sha: f.sha, data };
+  } catch (e) { if (e.status === 404) return { sha: null, data: { items: [] } }; throw e; }
+}
+async function writeGallery(c, data, sha, message) {
+  const body = { message, content: b64json(data), branch: c.branch };
+  if (sha) body.sha = sha;
+  await gh(c, 'contents/gallery.json', { method: 'PUT', body: JSON.stringify(body) });
+}
+async function toJpegB64(file) {
+  let bmp;
+  try { bmp = await createImageBitmap(file, { imageOrientation: 'from-image' }); }
+  catch (e) {
+    bmp = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = URL.createObjectURL(file); });
+  }
+  const w0 = bmp.width, h0 = bmp.height, k = Math.min(1, 1600 / Math.max(w0, h0));
+  const cv = document.createElement('canvas'); cv.width = Math.round(w0 * k); cv.height = Math.round(h0 * k);
+  const ctx = cv.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height); ctx.drawImage(bmp, 0, 0, cv.width, cv.height);
+  return cv.toDataURL('image/jpeg', .85).split(',')[1];
+}
+
+function renderMine(items, c) {
+  const ul = $('#mine'); ul.replaceChildren();
+  if (!items.length) { ul.append(h('li', { style: 'display:block;color:var(--muted)' }, 'No photos uploaded yet.')); return; }
+  items.forEach(it => {
+    const del = h('button', { class: 'btn small danger', type: 'button' }, 'Delete');
+    del.addEventListener('click', () => removePhoto(it));
+    ul.append(h('li', {},
+      h('img', { src: 'https://raw.githubusercontent.com/' + c.user + '/' + c.repo + '/' + c.branch + '/gallery/' + encodeURIComponent(it.file), alt: '' }),
+      h('span', { class: 'cap' }, it.caption || it.file), del));
+  });
+}
+async function connect() {
+  if (busy) return;
+  try {
+    const c = cfg(); setBusy(true); say('Connecting to GitHub...');
+    const { data } = await readGallery(c);
+    saveCfg(c); renderMine(data.items, c);
+    say('Connected. ' + data.items.length + ' photo(s) in your gallery.', 'ok');
+  } catch (e) { say(e.message, 'err'); }
+  setBusy(false);
+}
+async function upload() {
+  if (busy || !pending.length) return;
+  try {
+    const c = cfg(); setBusy(true); saveCfg(c);
+    const added = [], stamp = Date.now();
+    for (let i = 0; i < pending.length; i++) {
+      say('Uploading photo ' + (i + 1) + ' of ' + pending.length + '...');
+      const b64 = await toJpegB64(pending[i].file);
+      const name = stamp + '-' + i + '.jpg';
+      await gh(c, 'contents/gallery/' + name, { method: 'PUT', body: JSON.stringify({ message: 'Add photo', content: b64, branch: c.branch }) });
+      added.push({ file: name, caption: pending[i].caption });
+    }
+    say('Updating gallery list...');
+    const { sha, data } = await readGallery(c);
+    data.items = [...added, ...data.items];
+    await writeGallery(c, data, sha, 'Update gallery');
+    pending.forEach(p => URL.revokeObjectURL(p.url)); pending = []; renderPending(); $('#a-files').value = '';
+    renderMine(data.items, c);
+    say('Uploaded ' + added.length + ' photo(s). They appear on the site after GitHub Pages redeploys, about a minute.', 'ok');
+  } catch (e) { say(e.message, 'err'); }
+  setBusy(false);
+}
+async function removePhoto(it) {
+  if (busy || !confirm('Delete this photo from your gallery?')) return;
+  try {
+    const c = cfg(); setBusy(true); say('Deleting...');
+    const { sha, data } = await readGallery(c);
+    data.items = data.items.filter(x => x.file !== it.file);
+    await writeGallery(c, data, sha, 'Update gallery');
+    try {
+      const f = await gh(c, 'contents/gallery/' + encodeURIComponent(it.file) + '?ref=' + encodeURIComponent(c.branch));
+      await gh(c, 'contents/gallery/' + encodeURIComponent(it.file), { method: 'DELETE', body: JSON.stringify({ message: 'Remove photo', sha: f.sha, branch: c.branch }) });
+    } catch (e) { /* list is already updated; the file can stay in the repo */ }
+    renderMine(data.items, c);
+    say('Deleted. The site updates after GitHub Pages redeploys.', 'ok');
+  } catch (e) { say(e.message, 'err'); }
+  setBusy(false);
+}
+function renderPending() {
+  const ul = $('#pend'); ul.replaceChildren();
+  pending.forEach((p, i) => {
+    const cap = h('input', { type: 'text', placeholder: 'Caption (optional)', 'aria-label': 'Caption for photo ' + (i + 1), value: p.caption });
+    cap.addEventListener('input', () => { p.caption = cap.value.trim(); });
+    const rm = h('button', { class: 'btn small', type: 'button', 'aria-label': 'Remove photo ' + (i + 1) }, 'Remove');
+    rm.addEventListener('click', () => { URL.revokeObjectURL(p.url); pending.splice(i, 1); renderPending(); });
+    ul.append(h('li', {}, h('img', { src: p.url, alt: '' }), cap, rm));
+  });
+  $('#a-upload').disabled = busy || !pending.length;
+}
+$('#a-files').addEventListener('change', e => {
+  [...e.target.files].forEach(f => { if (f.type.startsWith('image/')) pending.push({ file: f, caption: '', url: URL.createObjectURL(f) }); });
+  renderPending();
+});
+$('#a-connect').onclick = connect;
+$('#a-upload').onclick = upload;
+
+function openAdmin() {
+  adminOpener = document.activeElement;
+  $('#admin').hidden = false; document.body.style.overflow = 'hidden';
+  (val('a-user') ? $('#a-token') : $('#a-user')).focus();
+}
+function closeAdmin() {
+  $('#admin').hidden = true; document.body.style.overflow = '';
+  if (location.hash === '#admin') history.replaceState(null, '', location.pathname + location.search);
+  if (adminOpener && adminOpener.focus) adminOpener.focus();
+}
+$('#open-admin').onclick = openAdmin;
+if (store.get('adm_token')) $('#open-admin').hidden = false;
+$('#adm-close').onclick = closeAdmin;
+$('#adm-scrim').onclick = closeAdmin;
+if (location.hash === '#admin') openAdmin();
+addEventListener('hashchange', () => { if (location.hash === '#admin' && $('#admin').hidden) openAdmin(); });
+
+addEventListener('keydown', e => {
+  if (!$('#lb').hidden) {
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') stepLb(-1);
+    if (e.key === 'ArrowRight') stepLb(1);
+  } else if (e.key === 'Escape' && !$('#admin').hidden) closeAdmin();
+});
+
+/* ---------------- futuristic layer ---------------- */
+(function fx() {
+  // scroll progress bar
+  const bar = $('#progress');
+  const onScroll = () => { const max = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(scrollY / max, 1) : 0).toFixed(4) + ')'; };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // keyword ticker (list twice for a seamless loop)
+  const words = ['Nokia IP/MPLS', 'BGP', 'IS-IS', 'Nokia NSP', 'Python', 'Selenium', 'Machine learning', 'Network automation', '24x7 operations', 'Power grid'];
+  const track = $('#ticker');
+  [...words, ...words].forEach(t => track.append(h('span', {}, t)));
+
+  // spotlight that follows the pointer on cards
+  document.addEventListener('pointermove', e => {
+    const t = e.target.closest && e.target.closest('.spot');
+    if (!t) return;
+    const r = t.getBoundingClientRect();
+    t.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    t.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }, { passive: true });
+
+  // rotating role line with typing effect
+  const roleEl = $('#role');
+  const roles = ['L1 NOC Engineer', 'Nokia IP/MPLS', 'BGP and IS-IS', 'Python automation'];
+  if (!reduced) {
+    let w = 0, i = 0, del = false;
+    (function tick() {
+      const word = roles[w];
+      roleEl.textContent = word.slice(0, i);
+      if (!del) {
+        i++;
+        if (i > word.length) { del = true; return setTimeout(tick, 1500); }
+        return setTimeout(tick, 70);
+      }
+      i--;
+      if (i < 0) { del = false; i = 0; w = (w + 1) % roles.length; return setTimeout(tick, 250); }
+      setTimeout(tick, 35);
+    })();
+  }
+
+  // headings decode like a terminal when they scroll into view
+  const chars = '01<>/_#$%&';
+  function scramble(el) {
+    const final = el.dataset.text; let f = 0; const total = 22;
+    const id = setInterval(() => {
+      f++;
+      const keep = Math.floor(final.length * f / total);
+      el.textContent = [...final].map((c, k) => (k < keep || c === ' ') ? c : chars[(Math.random() * chars.length) | 0]).join('');
+      if (f >= total) { clearInterval(id); el.textContent = final; }
+    }, 35);
+  }
+  const hio = ('IntersectionObserver' in window && !reduced)
+    ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { scramble(e.target); hio.unobserve(e.target); } }), { threshold: .6 })
+    : null;
+  document.querySelectorAll('main h2').forEach(hd => {
+    hd.dataset.text = hd.textContent;
+    hd.setAttribute('aria-label', hd.textContent);
+    if (hio) hio.observe(hd);
+  });
+
+  // mouse-only effects: cursor glow and magnetic buttons
+  if (!reduced && matchMedia('(hover:hover)').matches) {
+    const g = $('#glow');
+    let gx = innerWidth / 2, gy = innerHeight / 2, tx = gx, ty = gy;
+    addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; g.style.opacity = 1; }, { passive: true });
+    (function loop() {
+      gx += (tx - gx) * .12; gy += (ty - gy) * .12;
+      g.style.transform = 'translate3d(' + gx.toFixed(1) + 'px,' + gy.toFixed(1) + 'px,0)';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('.mag').forEach(b => {
+      b.addEventListener('pointermove', e => {
+        if (e.pointerType !== 'mouse') return;
+        const r = b.getBoundingClientRect();
+        b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * .22).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) * .3).toFixed(1) + 'px)';
+      });
+      b.addEventListener('pointerleave', () => { b.style.transform = ''; });
+    });
+  }
+})();
+
+/* ---------------- 3D background: a living network ---------------- */
+(function initBg() {
+  const canvas = $('#bg');
+  if (!window.THREE) { canvas.remove(); return; }
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); }
+  catch (e) { canvas.remove(); return; }
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, 1, .1, 100);
+  camera.position.set(0, 0, 8);
+  const group = new THREE.Group(); scene.add(group);
+
+  // soft round sprite for points
+  const sc = document.createElement('canvas'); sc.width = sc.height = 64;
+  const sx = sc.getContext('2d'), gr = sx.createRadialGradient(32, 32, 0, 32, 32, 32);
+  gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(.35, 'rgba(255,255,255,.9)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+  sx.fillStyle = gr; sx.fillRect(0, 0, 64, 64);
+  const dot = new THREE.CanvasTexture(sc);
+
+  // nodes on a jittered sphere
+  const N = 120, R = 2.4, ga = Math.PI * (3 - Math.sqrt(5)), pts = [];
+  for (let i = 0; i < N; i++) {
+    const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), th = ga * i, j = .88 + Math.random() * .28;
+    pts.push(new THREE.Vector3(Math.cos(th) * r * R * j, y * R * j, Math.sin(th) * r * R * j));
+  }
+  // links: each node to its 3 nearest neighbours
+  const adj = Array.from({ length: N }, () => new Set()), seen = new Set(), edges = [];
+  for (let i = 0; i < N; i++) {
+    pts.map((p, k) => [p.distanceTo(pts[i]), k]).filter(x => x[1] !== i).sort((a, b) => a[0] - b[0]).slice(0, 3)
+      .forEach(([, k]) => { const key = i < k ? i + '-' + k : k + '-' + i; if (!seen.has(key)) { seen.add(key); edges.push([i, k]); adj[i].add(k); adj[k].add(i); } });
+  }
+  const lp = []; edges.forEach(([a, b]) => lp.push(pts[a].x, pts[a].y, pts[a].z, pts[b].x, pts[b].y, pts[b].z));
+  const lg = new THREE.BufferGeometry(); lg.setAttribute('position', new THREE.Float32BufferAttribute(lp, 3));
+  group.add(new THREE.LineSegments(lg, new THREE.LineBasicMaterial({ color: 0x5CE1E6, transparent: true, opacity: .3 })));
+
+  const mkPoints = (arr, color, size) => {
+    const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+    return new THREE.Points(g, new THREE.PointsMaterial({ color, size, map: dot, transparent: true, depthWrite: false, alphaTest: .01 }));
+  };
+  const nodeArr = [], hubArr = [];
+  pts.forEach((p, i) => (i % 11 === 0 ? hubArr : nodeArr).push(p.x, p.y, p.z));
+  group.add(mkPoints(nodeArr, 0xE9ECF8, .09));
+  group.add(mkPoints(hubArr, 0xFFB547, .22));
+
+  // orbit rings with satellites
+  const rings = [];
+  [[3.0, .5, .2, 1], [3.5, -.9, .4, -1]].forEach(([rad, rx, rz, dir]) => {
+    const seg = 128, arr = [];
+    for (let i = 0; i < seg; i++) { const a = i / seg * Math.PI * 2; arr.push(Math.cos(a) * rad, 0, Math.sin(a) * rad); }
+    const rg = new THREE.BufferGeometry(); rg.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+    const holder = new THREE.Group(); holder.rotation.x = rx; holder.rotation.z = rz;
+    holder.add(new THREE.LineLoop(rg, new THREE.LineBasicMaterial({ color: 0xFFB547, transparent: true, opacity: .24 })));
+    const sArr = new Float32Array(9), sg = new THREE.BufferGeometry(); sg.setAttribute('position', new THREE.BufferAttribute(sArr, 3));
+    holder.add(new THREE.Points(sg, new THREE.PointsMaterial({ color: 0x5CE1E6, size: .17, map: dot, transparent: true, depthWrite: false, alphaTest: .01 })));
+    group.add(holder); rings.push({ holder, rad, dir, sArr, sg, phase: Math.random() * 6 });
+  });
+
+  // packets travelling along links
+  const P = 48, packets = [], pArr = new Float32Array(P * 3);
+  for (let i = 0; i < P; i++) { const from = (Math.random() * N) | 0; packets.push({ from, to: [...adj[from]][0], t: Math.random(), v: .35 + Math.random() * .5 }); }
+  const pGeo = new THREE.BufferGeometry(); pGeo.setAttribute('position', new THREE.BufferAttribute(pArr, 3));
+  group.add(new THREE.Points(pGeo, new THREE.PointsMaterial({ color: 0xFFB547, size: .16, map: dot, transparent: true, depthWrite: false, alphaTest: .01 })));
+
+  // distant dust for depth
+  const dust = []; for (let i = 0; i < 260; i++) { const r = 9 + Math.random() * 9, a = Math.random() * 6.283, b = Math.acos(2 * Math.random() - 1); dust.push(r * Math.sin(b) * Math.cos(a), r * Math.cos(b), r * Math.sin(b) * Math.sin(a)); }
+  scene.add(mkPoints(dust, 0x7B87B8, .07));
+
+  let mx = 0, my = 0;
+  addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+  function resize() { const w = innerWidth, hh = innerHeight; renderer.setSize(w, hh, false); camera.aspect = w / hh; camera.updateProjectionMatrix(); }
+  addEventListener('resize', () => { resize(); if (reduced) draw(0); });
+  resize();
+
+  let spin = 0, tt = 0;
+  function draw(dt) {
+    const sy = scrollY, vh = innerHeight, p = Math.min(sy / vh, 1), wide = innerWidth > 860;
+    group.position.x += ((wide ? 2.1 * (1 - p) : 0) - group.position.x) * .07;
+    group.position.y += ((wide ? 0 : 0.6 * (1 - p)) - group.position.y) * .07;
+    group.scale.setScalar(1 + p * .25);
+    spin += dt * .12; tt += dt;
+    group.rotation.y = spin + sy * .0009;
+    group.rotation.x = sy * .0004;
+    camera.position.x += (mx * 1.4 - camera.position.x) * .04;
+    camera.position.y += (-my * 1.0 - camera.position.y) * .04;
+    camera.lookAt(0, 0, 0);
+    for (let i = 0; i < P; i++) {
+      const k = packets[i]; k.t += k.v * dt;
+      if (k.t >= 1) { const prev = k.from; k.from = k.to; const nb = [...adj[k.from]]; k.to = nb[(Math.random() * nb.length) | 0]; if (nb.length > 1 && k.to === prev) k.to = nb[(Math.random() * nb.length) | 0]; k.t = 0; }
+      const a = pts[k.from], b = pts[k.to];
+      pArr[i * 3] = a.x + (b.x - a.x) * k.t; pArr[i * 3 + 1] = a.y + (b.y - a.y) * k.t; pArr[i * 3 + 2] = a.z + (b.z - a.z) * k.t;
+    }
+    rings.forEach(r => {
+      r.holder.rotation.y += dt * .08 * r.dir;
+      for (let k = 0; k < 3; k++) { const a = r.phase + tt * .45 * r.dir + k * 2.0944; r.sArr[k * 3] = Math.cos(a) * r.rad; r.sArr[k * 3 + 1] = 0; r.sArr[k * 3 + 2] = Math.sin(a) * r.rad; }
+      r.sg.attributes.position.needsUpdate = true;
+    });
+    pGeo.attributes.position.needsUpdate = true;
+    renderer.render(scene, camera);
+  }
+  if (reduced) { draw(0); addEventListener('scroll', () => draw(0), { passive: true }); return; }
+  let last = performance.now();
+  (function loop(now) { const dt = Math.min((now - last) / 1000, .05); last = now; draw(dt); requestAnimationFrame(loop); })(last);
+})();
+</script>
+</body>
+</html>
